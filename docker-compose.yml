@@ -1,0 +1,28 @@
+# @format
+
+version: "3.8"
+
+services:
+  apis:
+    image: node:14-alpine
+    command: sh -c "yarn install && yarn start"
+    ports:
+      - 4000:3000
+    links:
+      - mongohost
+    working_dir: /ropstam-test
+    volumes:
+      - ./:/ropstam-test
+    environment:
+      JWT_SECRET: 155fb0a899c3f99a39ab59fb11d2c9e02c3e14c5eca6e0b3816454dd7307e536
+      JWT_EXPIRATION: 30d
+      SENDGRID_API_KEY: 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
+      MONGO_HOST: mongohost
+      MONGO_DATABASE: ropstam
+      ENVIRONMENT: dev
+
+  mongohost:
+    image: mongo
+    restart: always
+    ports:
+      - 27021:27017
