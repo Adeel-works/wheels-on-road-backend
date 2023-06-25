@@ -1,15 +1,7 @@
 import { ServerRoute } from "@hapi/hapi";
 import HttpStatus from "http-status-codes";
-import {doesUserExist, generateRandomPassword,} from '../../helpers';
-import { generateAccessToken, generateHashedPassword, verifyPassword } from '../auth/auth.service';
-import { IUser, User } from '../auth/user.model';
 import * as Joi from 'joi';
-import { convertNumberToCodeFormat } from "../../utils";
-import { roles } from "../roles";
-import { ORDER_DELIVERY_STATUS } from "../../types";
 import { Categories, ICategory } from "./index.model";
-
-
 
 export const CategoriesRoute: ServerRoute[] = [
     {

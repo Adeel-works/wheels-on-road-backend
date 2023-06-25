@@ -1,5 +1,4 @@
 import * as mongoose from "mongoose";
-import { ORDER_DELIVERY_STATUS } from "../../types";
 
 const VehicleSchema = new mongoose.Schema({
     name:String,

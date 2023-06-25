@@ -36,6 +36,12 @@ const prefixizeRoutes = (
 let salt = bcrypt.genSaltSync(10);
 let hash = bcrypt.hashSync('Admin@123', salt);
 
+
+/**
+ * @description The code below is for adding a new admin
+ */
+
+
 const checkAdmin = async () => {
   const user = await User.findOne({ email: 'manager@gmail.com' });
   if (!user) {

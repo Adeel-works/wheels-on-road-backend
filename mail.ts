@@ -1,5 +1,10 @@
 const nodemailer = require("nodemailer");
 
+
+/**
+ * @summary This module is currently not operational
+ */
+
 export const transporter = nodemailer.createTransport({
   host: "smtp.ethereal.email",
   port: 587,

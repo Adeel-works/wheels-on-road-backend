@@ -7,4 +7,4 @@ Coding guidelines for this repo should be followed as strictly as Laws of Nature
 # How to Run
 `docker-compose up -d`
 
-visit `localhost:3000/documentation` for Swagger Docs of the APIs.
+visit `localhost:4000/documentation` for Swagger Docs of the APIs.

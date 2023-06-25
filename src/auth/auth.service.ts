@@ -1,10 +1,7 @@
 /** @format */
 
 import { User } from "./user.model";
-import moment from "moment";
 import { Request, ResponseToolkit } from "@hapi/hapi";
-import { v4 as uuidv4 } from "uuid";
-import { ResetToken } from "./reset-tokens.model";
 
 
 var jwt = require("jsonwebtoken");
